@@ -5,7 +5,7 @@ from users.serializers import UserRegisterSerializer, UserSerializer
 
 
 # Create your views here.
-class UserRegisterApiView(generics.CreateAPIView):
+class UserRegisterAPIView(generics.CreateAPIView):
     """ Регистрация пользователя """
     serializer_class = UserRegisterSerializer
 
@@ -15,7 +15,7 @@ class UserRegisterApiView(generics.CreateAPIView):
         user.save()
 
 
-class UserProfileApiView(generics.UpdateAPIView):
+class UserProfileAPIView(generics.UpdateAPIView):
     """ Изменение профиля пользователя """
     serializer_class = UserSerializer
     queryset = User.objects.all()
@@ -26,6 +26,6 @@ class UserProfileApiView(generics.UpdateAPIView):
         user.save()
 
 
-class UserDestroyApiView(generics.DestroyAPIView):
+class UserDestroyAPIView(generics.DestroyAPIView):
     """ Удаление пользователя """
     queryset = User.objects.all()
