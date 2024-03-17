@@ -8,5 +8,5 @@ from habits.models import Habit
 class HabitAdmin(admin.ModelAdmin):
     fields = (
         'user', 'place', 'time', 'action', 'sign_pleasant_habit', 'related_habit', 'periodicity', 'reward',
-        'time_complete', 'sign_publicity',
+        'time_complete', 'sign_publicity', 'action_date',
     )

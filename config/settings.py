@@ -172,41 +172,6 @@ CELERY_TASK_TIME_LIMIT = 30 * 60
 
 CELERY_IMPORTS = ["habits.tasks"]
 
-CELERY_BEAT_SCHEDULE = {
-    'habits_every_day': {
-        'task': 'habits.tasks.habits_every_day',  # Путь к задаче
-        'schedule': crontab(),  # Расписание выполнения задачи (например, каждые 10 минут)
-    },
-    # 'every_two_days': {
-    #     'task': 'habits.tasks.every_two_days',  # Путь к задаче
-    #     'schedule': crontab(hours=24),  # Расписание выполнения задачи (например, каждые 10 минут)
-    # },
-    # 'every_three_days': {
-    #     'task': 'habits.tasks.every_three_days',  # Путь к задаче
-    #     'schedule': crontab(hours=48),  # Расписание выполнения задачи (например, каждые 10 минут)
-    # },
-    # 'every_four_days': {
-    #     'task': 'habits.tasks.every_four_days',  # Путь к задаче
-    #     'schedule': crontab(hours=72),  # Расписание выполнения задачи (например, каждые 10 минут)
-    # },
-    # 'every_five_days': {
-    #     'task': 'habits.tasks.every_five_days',  # Путь к задаче
-    #     'schedule': crontab(hours=96),  # Расписание выполнения задачи (например, каждые 10 минут)
-    # },
-    # 'every_six_days': {
-    #     'task': 'habits.tasks.every_six_days',  # Путь к задаче
-    #     'schedule': crontab(hours=120),  # Расписание выполнения задачи (например, каждые 10 минут)
-    # },
-    # 'every_seven_days': {
-    #     'task': 'habits.tasks.every_seven_days',  # Путь к задаче
-    #     'schedule': crontab(hours=144),  # Расписание выполнения задачи (например, каждые 10 минут)
-    # },
-    # 'send_message_habit_telegram': {
-    #     'task': 'habits.tasks.send_message_habit_telegram',  # Путь к задаче
-    #     'schedule': crontab(),  # Расписание выполнения задачи (например, каждые 10 минут)
-    # },
-}
-
 TELEGRAM_API_TOKEN = os.getenv('TELEGRAM_API_TOKEN')
 
 SWAGGER_SETTINGS = {
