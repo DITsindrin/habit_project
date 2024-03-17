@@ -15,6 +15,7 @@ PERIODICITY_CHOICES = (
 
 
 class Habit(models.Model):
+    """ Модель привычки """
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Создатель привычки')
     place = models.CharField(max_length=150, verbose_name='Место выполнения привычки')
     time = models.TimeField(verbose_name='Время, когда необходимо выполнять привычку')
@@ -28,7 +29,7 @@ class Habit(models.Model):
     sign_publicity = models.BooleanField(default=False, verbose_name='Признак публичности')
 
     def __str__(self):
-        return f'Я {self.user} буду {self.action} {self.periodicity} в {self.time} - {self.place}'
+        return f'Я {self.user} буду {self.action} {self.periodicity} в {self.time} - {self.place} - {self.time_complete}'
 
     class Meta:
         verbose_name = 'Привычка'
