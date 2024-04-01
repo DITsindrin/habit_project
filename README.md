@@ -13,3 +13,19 @@
 Настроен CORS.
 Настроен drf_yasg.
 
+В проекте созданы [Dockerfile](Dockerfile) и [docker-compose.yaml](docker-compose.yaml).
+Перед запуском комад docker-compose build docker-compose up, настройте файл [.env](.env).
+POSTGRES_DB=
+POSTGRES_USER=
+POSTGRES_PASSWORD=
+POSTGRES_HOST=
+POSTGRES_PORT=
+
+CACHE_ENABLED=
+CACHE_LOCATION=
+
+CELERY_BROKER_URL=
+CELERY_RESULT_BACKEND=
+
+
+
